@@ -10,3 +10,7 @@ def login():
 def index():
     user={'name':'tuzhenyu'}
     return render_template("index.html",user=user)
+
+@app.route('/create')
+def create():
+    return render_template("create.html")
