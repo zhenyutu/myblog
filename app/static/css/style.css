@@ -43,3 +43,18 @@ footer{
   height: 80px;
   background: #2b2b2b;
 }
+footer ul{
+  margin-top: 10px;
+}
+footer .fa{
+  font-size: 30px;
+  color: #aaa;
+  margin-right: 10px;
+}
+footer .power{
+  text-align: center;
+}
+footer p{
+  font-size: 13px;
+  color: #ccc;
+}
