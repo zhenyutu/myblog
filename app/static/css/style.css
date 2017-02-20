@@ -185,6 +185,14 @@ header{
   font-size: 14px;
 }
 
+.articleSubmit button{
+  width: 1260px;
+  height: 40px;
+  margin-top: 30px;
+  background-color: #ddd;
+
+}
+
 footer{
   width: 100%;
   height: 80px;
