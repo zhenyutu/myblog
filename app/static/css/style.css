@@ -110,6 +110,7 @@ header{
   text-decoration: none;
   margin-right: 30px;
 }
+
 .paginationWapper{
   text-align: center;
 }
@@ -160,22 +161,29 @@ header{
 /*×××××××××××××××××　index.html　×××××××××××××××××××*/
 .articleEdit form input{
   background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.8), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+  background-color: #eee;
+  border: 1px solid #aaa;
 }
 
-#markDownShow{
+.flask-pagedown-input {
+  width: 615px;
+  height: 600px;
+  background-color: #eee;
+  border: 1px solid #aaa;
   margin-top: 30px;
-  height: 400px;
-  border:1px solid #aaa;
+  font-size: 20px;
 }
-#markDownEdit{
+
+.flask-pagedown-preview {
+  width: 615px;
+  height: 600px;
+  background-color: #e2e2e2;
+  background: url(../img/background.jpg);
+  background-repeat:repeat;
+  border: 1px solid #aaa;
   margin-top: 30px;
-  height: 400px;
-  background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.8), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+  font-size: 14px;
 }
-
-
 
 footer{
   width: 100%;

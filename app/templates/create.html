@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block content %}
 <div class="articleEdit wrapper row">
   <div class="col-md-2"></div>
@@ -10,8 +11,8 @@
           <div class="col-md-6"><label>Tag</label><input type="text" class="form-control" id="tag" name="tag"></div>
         </div>
         <div class="row">
-          <div class="col-md-6"><div id="markDownShow"></div></div>
-          <div class="col-md-6"><textarea class="form-control" id="markDownEdit" name="markDownEdit" cols="20" rows="5"></textarea></div>
+          <div class="col-md-6">{{ form.markDownEdit(only_preview=True, rows=10) }}</div>
+          <div class="col-md-6">{{ form.markDownEdit(only_input=True, rows=10) }}</div>
         </div>
         <div class="form-group">
             <button  type="submit" class="btn btn-default">Submit</button>
@@ -19,5 +20,4 @@
     </form>
   </div>
 </div>
-
 {% endblock %}

@@ -1,5 +1,5 @@
 from app import app
-from app import db,models
+from app import db,models,form
 from flask import render_template
 from flask import request
 
@@ -17,4 +17,5 @@ def index():
 
 @app.route('/create')
 def create():
-    return render_template("create.html")
+    postForm = form.PostForm()
+    return render_template("create.html",form = postForm)
