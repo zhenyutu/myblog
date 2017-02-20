@@ -110,6 +110,13 @@ header{
   text-decoration: none;
   margin-right: 30px;
 }
+.paginationWapper{
+  text-align: center;
+}
+.pagination li a{
+  width: 50px;
+  height: 40px;
+}
 
 .wrapper .rightSection{
   height: 1185px;
