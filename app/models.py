@@ -1,4 +1,5 @@
 from app import db
+from datetime import datetime
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -12,5 +13,8 @@ class User(db.Model):
 class Article(db.Model):
     __tablename__ = 'articles'
     id = db.Column(db.Integer, primary_key = True)
-    body = db.Column(db.Text)
-    timestamp = db.Column(db.DateTime)
+    markDownEdit = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime,index=True,default=datetime.utcnow)
+    title = db.Column(db.String(128))
+    category = db.Column(db.String(32))
+    tag = db.Column(db.String(32))

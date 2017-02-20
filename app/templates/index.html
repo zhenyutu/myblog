@@ -21,54 +21,24 @@
             </ul>
           </div>
         </li>
-        <li class="blogAticle">
-          <div class="articleHeader">
-            <p><a href="">CSS滑动下划线</a></p>
-          </div>
-          <div class="articleContent">
-            <p>搜集翻译了一些下划线的动态效果，感觉可能什么时候会用，这里贴一下~请使用现代浏览器查看效果。 主要就是使用了CSS的:after伪类，再加上一些transition动画效果，设置设置宽度高度，左右距离好像就完事儿了…… 下划线从上到下出现 鼠标放上去，你会发现下划线“生长”出来了，不过页面所有的内容也往下走了3像素，这样视觉效果不是很</p>
-          </div>
-          <div class="articleFooter">
-            <ul>
-              <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>2016-11-13</span></li>
-              <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>tuzhenyu</span></li>
-              <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>CSS</span></li>
-              <li class="readMore"><a href="">read more</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="blogAticle">
-          <div class="articleHeader">
-            <p><a href="">CSS滑动下划线</a></p>
-          </div>
-          <div class="articleContent">
-            <p>搜集翻译了一些下划线的动态效果，感觉可能什么时候会用，这里贴一下~请使用现代浏览器查看效果。 主要就是使用了CSS的:after伪类，再加上一些transition动画效果，设置设置宽度高度，左右距离好像就完事儿了…… 下划线从上到下出现 鼠标放上去，你会发现下划线“生长”出来了，不过页面所有的内容也往下走了3像素，这样视觉效果不是很</p>
-          </div>
-          <div class="articleFooter">
-            <ul>
-              <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>2016-11-13</span></li>
-              <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>tuzhenyu</span></li>
-              <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>CSS</span></li>
-              <li class="readMore"><a href="">read more</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="blogAticle">
-          <div class="articleHeader">
-            <p><a href="">CSS滑动下划线</a></p>
-          </div>
-          <div class="articleContent">
-            <p>搜集翻译了一些下划线的动态效果，感觉可能什么时候会用，这里贴一下~请使用现代浏览器查看效果。 主要就是使用了CSS的:after伪类，再加上一些transition动画效果，设置设置宽度高度，左右距离好像就完事儿了…… 下划线从上到下出现 鼠标放上去，你会发现下划线“生长”出来了，不过页面所有的内容也往下走了3像素，这样视觉效果不是很</p>
-          </div>
-          <div class="articleFooter">
-            <ul>
-              <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>2016-11-13</span></li>
-              <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>tuzhenyu</span></li>
-              <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>CSS</span></li>
-              <li class="readMore"><a href="">read more</a></li>
-            </ul>
-          </div>
-        </li>
+        {% for article in articles %}
+          <li class="blogAticle">
+            <div class="articleHeader">
+              <p><a href="">{{article.title}}</a></p>
+            </div>
+            <div class="articleContent">
+              <p>{{article.markDownEdit}}</p>
+            </div>
+            <div class="articleFooter">
+              <ul>
+                <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>{{article.timestamp}}</span></li>
+                <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>{{article.category}}</span></li>
+                <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>{{article.tag}}</span></li>
+                <li class="readMore"><a href="">read more</a></li>
+              </ul>
+            </div>
+          </li>
+        {% endfor %}
       </ul>
     </div>
     <div class="col-md-3 rightSection">
