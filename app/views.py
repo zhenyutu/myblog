@@ -19,3 +19,8 @@ def index():
 def create():
     postForm = form.PostForm()
     return render_template("create.html",form = postForm)
+
+@app.route('/article/<int:id>')
+def article(id):
+    article = models.Article.query.get_or_404(id)
+    return render_template("article.html",article = article)
