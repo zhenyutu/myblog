@@ -9,4 +9,4 @@ CSRF_ENABLED = True
 SECRET_KEY = 'you-will-never-guess'
 
 # 分页数目
-FLASKY_POSTS_PER_PAGE = 3
+FLASKY_POSTS_PER_PAGE = 4

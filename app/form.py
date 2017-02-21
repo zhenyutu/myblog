@@ -8,4 +8,5 @@ class PostForm(FlaskForm):
     title = StringField('title', validators=[Required()])
     category = StringField('category', validators=[Required()])
     tag = StringField('tag', validators=[Required()])
+    describe = TextAreaField('describe', validators=[Required()])
     submit = SubmitField('Submit')

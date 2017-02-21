@@ -18,3 +18,4 @@ class Article(db.Model):
     title = db.Column(db.String(128))
     category = db.Column(db.String(32))
     tag = db.Column(db.String(32))
+    describe = db.Column(db.Text)

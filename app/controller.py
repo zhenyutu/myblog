@@ -16,7 +16,7 @@ def loginForm():
 @app.route('/postForm', methods=['GET','POST'])
 def postForm():
     postForm = form.PostForm()
-    article = models.Article(markDownEdit = postForm.markDownEdit.data,title = postForm.title.data,category = postForm.category.data,tag = postForm.tag.data)
+    article = models.Article(markDownEdit = postForm.markDownEdit.data,title = postForm.title.data,category = postForm.category.data,tag = postForm.tag.data,describe = postForm.describe.data)
     db.session.add(article)
     db.session.commit()
     return redirect(url_for('index'))
