@@ -7,7 +7,17 @@
     <form action="/postForm"  method = "post">
         <div class="title"><label>Title</label><input type="text" class="form-control" id="title" name="title"></div>
         <div class="row">
-          <div class="col-md-6"><label>Category</label><input type="text" class="form-control" id="category" name="category"></div>
+          <div class="col-md-6"><div><label>Category</label></div>
+            <select class="" class="form-control" id="category"  name="category">
+              <option value="Java">Java</option>
+              <option value="Python">Python</option>
+              <option value="Web">Web</option>
+              <option value="算法">算法</option>
+              <option value="大数据">大数据</option>
+              <option value="机器学习">机器学习</option>
+              <option value="其它">其它</option>
+            </select>
+          </div>
           <div class="col-md-6"><label>Tag</label><input type="text" class="form-control" id="tag" name="tag"></div>
         </div>
         <div class="describe"><label>Describe</label><input type="text" class="form-control" id="describe" name="describe"></div>

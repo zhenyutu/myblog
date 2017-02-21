@@ -156,9 +156,12 @@ header{
   padding-left: 10px;
   padding-top: 5px;
   border-bottom: 1px solid #ccc;
+  color: #4d6dad;
 }
-
-/*×××××××××××××××××　index.html　×××××××××××××××××××*/
+.side ul li a{
+  color: #4d6dad;
+}
+/*×××××××××××××××××　create.html　×××××××××××××××××××*/
 .articleEdit form input{
   background-color: #fff;
   background-color: #eee;
@@ -171,7 +174,7 @@ header{
   background-color: #eee;
   border: 1px solid #aaa;
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .flask-pagedown-preview {
@@ -193,7 +196,15 @@ header{
 
 }
 
-/*×××××××××××××××××　index.html　×××××××××××××××××××*/
+#category{
+  width: 615px;
+  height:33px;
+  background-color: #fff;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+}
+
+/*×××××××××××××××××　article.html　×××××××××××××××××××*/
 .articleShow{
   height: 1183px;
   padding: 20px 30px;
