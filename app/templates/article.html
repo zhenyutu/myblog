@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>{{article.title}}</h1>
+<div class="wrapper row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6 row articleShow">
+    <h1>{{article.title}}</h1>
+    <div class="articleFooter">
+      <ul>
+        <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>{{article.timestamp}}</span></li>
+        <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>{{article.category}}</span></li>
+        <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>{{article.tag}}</span></li>
+      </ul>
+    </div>
+    <hr>
+    <article class="articleContant">
+      <p>{{article.markDownEdit}}</p>
+    </article>
+  </div>
+</div>
 
 {% endblock %}
