@@ -5,11 +5,11 @@ from flask import render_template
 from flask import request
 import re
 
-@app.route('/')
 @app.route('/login')
 def login():
     return render_template("login.html")
 
+@app.route('/')
 @app.route('/index', methods=['GET','POST'])
 def index():
     page = request.args.get('page', 1, type=int)

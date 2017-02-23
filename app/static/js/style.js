@@ -1,8 +1,8 @@
 $(function () {
   $("#loginButton").click(function () {
     var form = {};
-    form['username'] = $('.loginForm div:nth-child(1) input').val();
-    form['password'] = $('.loginForm div:nth-child(2) input').val();
+    form['username'] = $('.username input').val();
+    form['password'] = $('.password input').val();
     var data={
       data:JSON.stringify(form)
     }
