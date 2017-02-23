@@ -1,4 +1,5 @@
 from app import db,models
+import re
 
 def loginCheck(name,password):
     user_list = models.User.query.all();
@@ -20,3 +21,11 @@ def splitTags(allArticles):
         for tag in article.tag.split(', '):
             tags.add(tag)
     return tags
+
+def isContainTag(articles,kind):
+    articleList = []
+    for article in articles:
+        for tag in article.tag.split(', '):
+            if tag == kind :
+                articleList.append(article)
+    return articleList
