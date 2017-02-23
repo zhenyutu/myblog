@@ -14,7 +14,11 @@
     </div>
     <hr>
     <article class="articleContant">
-      <p>{{article.markDownEdit}}</p>
+      {% if article.htmlEdit %}
+        {{ article.htmlEdit | safe }}
+      {% else %}
+        {{ article.markDownEdit }}
+      {% endif %}
     </article>
   </div>
 </div>
