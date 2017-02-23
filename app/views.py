@@ -1,5 +1,6 @@
 from app import app
 from app import db,models,form,service
+from app import controller
 from flask import render_template
 from flask import request
 import re
@@ -21,7 +22,12 @@ def index():
 @app.route('/create')
 def create():
     postForm = form.PostForm()
-    return render_template("create.html",form = postForm)
+    print('in the create:')
+    print(controller.loginState)
+    if controller.loginState == True:
+        return render_template("create.html",form = postForm)
+    else:
+        return render_template("login.html")
 
 @app.route('/article/<int:id>')
 def article(id):
