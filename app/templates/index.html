@@ -58,13 +58,15 @@
       <div class="side tags">
         <div class="header"><i class="fa fa-tags" aria-hidden="true"></i><span>Tags</span></div>
         <ul>
-          <li>CSS滑动下划线</li>
-          <li>CSS滑动下划线</li>
-          <li>CSS滑动下划线</li>
-          <li>CSS滑动下划线</li>
-          <li>CSS滑动下划线</li>
-          <li>CSS滑动下划线</li>
-          <li>CSS滑动下划线</li>
+          {% for tag in tags %}
+            {% if loop.index0%3==0 %}
+              <li class="row">
+                <div class="col-md-4"><a href="{{ url_for('category', kind = 'Java', page = p) }}">{{tags[loop.index0]}}</a></div>
+                <div class="col-md-4"><a href="{{ url_for('category', kind = 'Java', page = p) }}">{{tags[loop.index0+1]}}</a></div>
+                <div class="col-md-4"><a href="{{ url_for('category', kind = 'Java', page = p) }}">{{tags[loop.index0+2]}}</a></div>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
       <div class="side recentArticles">

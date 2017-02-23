@@ -13,3 +13,10 @@ def loginCheck(name,password):
             return False;
     else:
         return False;
+
+def splitTags(allArticles):
+    tags = set([])
+    for article in allArticles:
+        for tag in article.tag.split(', '):
+            tags.add(tag)
+    return tags
