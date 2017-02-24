@@ -56,6 +56,29 @@ def Tag():
 
     return render_template("tag.html",articles = articles,pagination = pagination,recentArticles=recentArticles,tags = list(service.splitTags(allArticles)),tagArticle=tagArticle)
 
+@app.route('/project', methods=['GET','POST'])
+def Project():
+    page = request.args.get('page', 1, type=int)
+    pagination = models.Article.query.filter(models.Article.category == 'project').order_by(models.Article.timestamp.desc()).paginate(page, per_page=app.config['FLASKY_POSTS_PER_PAGE'],error_out=False)
+    articles = pagination.items
+    allArticles = models.Article.query.all();
+    recentArticles = models.Article.query.order_by(models.Article.timestamp.desc())[0:7]
+    tagArticle = service.isContainTag(allArticles,"project")
+
+    return render_template("project.html",articles = articles,pagination = pagination,recentArticles=recentArticles,tags = list(service.splitTags(allArticles)),tagArticle=tagArticle)
+
+
+@app.route('/life', methods=['GET','POST'])
+def Life():
+    page = request.args.get('page', 1, type=int)
+    pagination = models.Article.query.filter(models.Article.category == 'life').order_by(models.Article.timestamp.desc()).paginate(page, per_page=app.config['FLASKY_POSTS_PER_PAGE'],error_out=False)
+    articles = pagination.items
+    allArticles = models.Article.query.all();
+    recentArticles = models.Article.query.order_by(models.Article.timestamp.desc())[0:7]
+    tagArticle = service.isContainTag(allArticles,"life")
+
+    return render_template("life.html",articles = articles,pagination = pagination,recentArticles=recentArticles,tags = list(service.splitTags(allArticles)),tagArticle=tagArticle)
+
 @app.route('/about')
 def about():
     return render_template("about.html")
