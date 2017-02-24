@@ -55,3 +55,7 @@ def Tag():
     tagArticle = service.isContainTag(allArticles,kind)
 
     return render_template("tag.html",articles = articles,pagination = pagination,recentArticles=recentArticles,tags = list(service.splitTags(allArticles)),tagArticle=tagArticle)
+
+@app.route('/about')
+def about():
+    return render_template("about.html")

@@ -261,3 +261,11 @@ footer p{
 .loginWapper{
   margin-top: 20px;
 }
+
+/*×××××××××××××××××　about.html　×××××××××××××××××××*/
+.introduce p{
+  font-size: 18px;
+}
+.aboutSite{
+  margin-top: 40px;
+}

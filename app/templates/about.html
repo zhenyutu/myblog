@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="wrapper row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6 row articleShow">
+    <h2>关于我</h2>
+    <hr>
+    <div class="introduce"><p>一个奋进的后端渣渣。。。</p></div>
+    <br>
+    <h2>关于本站</h2>
+    <hr>
+    <div class="aboutSite">
+      <h4>简介:</h4>
+      <ul>
+        <li>基于python+flask+bootstrap+mongodb开发</li>
+        <li>github地址：<a href="https://github.com/zhenyutu/myblog">myblog</a></li>
+      </ul>
+      <hr>
+      <h4>主要特性:</h4>
+      <ul>
+        <li>内置模型：标题、创建时间、分类、标签、文章等</li>
+        <li>基本功能：创建、分类、标签</li>
+        <li>数据库：使用SQLAlchemy驱动，以SQLITE为数据库</li>
+        <li>编辑器：Markdown编辑器</li>
+      </ul>
+      <hr>
+      <h4>主要依赖的第三方flask插件:</h4>
+      <ul>
+        <li>Flask-SQLAlchemy</li>
+        <li>Flask-PageDown</li>
+        <li>Flask-MarkDown</li>
+        <li>MarkDown</li>
+        <li>Jinja2</li>
+      </ul>
+      <hr>
+      <h4>以后要支持的功能:</h4>
+      <ul>
+        <li>评论功能</li>
+        <li>分享功能</li>
+        <li>搜索功能</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
